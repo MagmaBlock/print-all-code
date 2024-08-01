@@ -1,0 +1,36 @@
+{
+  "name": "print-all-code",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpx unbuild",
+    "start": "node dist/index.mjs",
+    "prepublish": "pnpm build"
+  },
+  "bin": {
+    "print-all-code": "./dist/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.2",
+    "typescript": "^5.5.4",
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ignore": "^5.3.1"
+  }
+}
