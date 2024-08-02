@@ -134,7 +134,7 @@ function processDirectory(
         const content = fs.readFileSync(filePath, "utf-8");
         const language = getLanguage(filePath);
 
-        output.push(`// ${relativePath}`);
+        output.push(`- ${relativePath}`);
         output.push("```" + language);
         output.push(content);
         output.push("```");
